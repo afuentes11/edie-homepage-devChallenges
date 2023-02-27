@@ -10,11 +10,11 @@
     $text-transform: capitalize,
     $color: variables.$color-gray-1,
     ){
-    font-family: $font-family;
-    font-style: $font-style;
-    font-weight: $font-weight;
-    font-size: converts.pixels-rem($font-size);
-    line-height: converts.pixels-rem($line-height);
-    text-transform: $text-transform;
-    color: $color;
+        font-family: $font-family;
+        font-style: $font-style;
+        font-weight: $font-weight;
+        font-size: converts.pixels-rem($font-size);
+        line-height: converts.pixels-rem($line-height);
+        text-transform: $text-transform;
+        color: $color;
 }

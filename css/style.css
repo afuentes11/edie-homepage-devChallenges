@@ -63,7 +63,7 @@ table {
   font-family: "Material Icons Round";
   font-weight: normal;
   font-style: normal;
-  font-size: 2rem;
+  font-size: 2.5rem;
   line-height: 1;
   letter-spacing: normal;
   text-transform: none;
@@ -84,6 +84,8 @@ table {
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
+  flex: 0 1 auto;
 }
 .header-logo {
   font-family: "Heebo", sans-serif;
@@ -91,11 +93,14 @@ table {
   font-weight: 800;
   font-size: 2.25rem;
   line-height: 3.3125rem;
-  text-transform: capitalize;
-  color: #333333;
   text-transform: none;
+  color: #333333;
   display: flex;
   flex-flow: row nowrap;
+  justify-content: start;
+  align-items: flex-start;
+  gap: 0rem;
+  flex: 0 1 auto;
 }
 .header-logo .jello {
   animation: jello-vertical 0.9s both;
@@ -157,7 +162,7 @@ table {
 }
 @media screen and (max-width: 860px) {
   .header-nav {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     width: 0vw;
@@ -177,9 +182,10 @@ table {
 .header-nav > .items {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 2rem;
+  flex: 0 1 auto;
 }
 @media screen and (max-width: 860px) {
   .header-nav > .items {
@@ -285,6 +291,253 @@ table {
   }
 }
 
+.home {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: start;
+  align-items: flex-start;
+  gap: 2.625rem;
+  flex: 0 1 auto;
+  margin: 5.625rem 0;
+}
+@media screen and (max-width: 748px) {
+  .home {
+    margin: 2.5rem 0;
+    gap: 1rem;
+  }
+}
+.home > .home-text {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: start;
+  align-items: flex-start;
+  gap: 0.5rem;
+  flex: 0 1 auto;
+  margin-left: 12.5rem;
+}
+@media screen and (max-width: 920px) {
+  .home > .home-text {
+    margin-left: 6.25rem;
+  }
+}
+@media screen and (max-width: 560px) {
+  .home > .home-text {
+    margin-left: 1.875rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .home > .home-text {
+    margin-left: 0.9375rem;
+  }
+}
+.home > .title > .support-text {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
+  text-transform: initial;
+  color: #2d9cdb;
+}
+@media screen and (max-width: 748px) {
+  .home > .title > .support-text {
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+  }
+}
+@media screen and (max-width: 748px) {
+  .home > .title > .support-text {
+    font-size: 0.9375rem;
+    line-height: 1.5rem;
+  }
+}
+.home > .title > .main-text {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 3rem;
+  line-height: 4.5rem;
+  text-transform: initial;
+  color: #333333;
+  max-width: 33.75rem;
+}
+@media screen and (max-width: 748px) {
+  .home > .title > .main-text {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    max-width: 17rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .home > .title > .main-text {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    max-width: 13.75rem;
+  }
+}
+.home > .home-img {
+  width: 100%;
+  border-radius: 1.125rem;
+}
+.home > .description {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: start;
+  align-items: flex-start;
+  gap: 2.625rem;
+  flex: 0 1 auto;
+  max-width: 22.875rem;
+}
+@media screen and (max-width: 748px) {
+  .home > .description {
+    max-width: 17.1875rem;
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 748px) {
+  .home > .description {
+    max-width: 14.6875rem;
+    gap: 1rem;
+  }
+}
+.home > .description > .support-text {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 3rem;
+  line-height: 4.5rem;
+  text-transform: initial;
+  color: #333333;
+}
+@media screen and (max-width: 748px) {
+  .home > .description > .support-text {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    max-width: 13.75rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .home > .description > .support-text {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    max-width: 11.25rem;
+  }
+}
+.home > .description > .main_text {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
+  text-transform: initial;
+  color: #4f4f4f;
+}
+@media screen and (max-width: 748px) {
+  .home > .description > .main_text {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .home > .description > .main_text {
+    font-size: 0.6875rem;
+    line-height: 1rem;
+  }
+}
+.home > .contact-email {
+  width: 22.875rem;
+}
+@media screen and (max-width: 748px) {
+  .home > .contact-email {
+    width: 18.125rem;
+  }
+}
+@media screen and (max-width: 350px) {
+  .home > .contact-email {
+    width: calc(100% - 40px);
+  }
+}
+@media screen and (max-width: 320px) {
+  .home > .contact-email {
+    width: calc(100% - 30px);
+  }
+}
+.home > .contact-email > .label {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.3125rem;
+  text-transform: initial;
+  color: #828282;
+}
+@media screen and (max-width: 748px) {
+  .home > .contact-email > .label {
+    font-size: 0.625rem;
+    line-height: 0.9375rem;
+  }
+}
+.home > .contact-email > .email-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 0 1 auto;
+  width: calc(100% - 1rem);
+  padding: 0.25rem;
+  padding-left: 0.75rem;
+  background: #f2f2f2;
+  border-radius: 0.75rem;
+}
+.home > .contact-email > .email-container > .email-input {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
+  text-transform: initial;
+  color: #4f4f4f;
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  width: 100%;
+}
+.home > .contact-email > .email-container > .email-input::placeholder {
+  color: #bdbdbd;
+}
+@media screen and (max-width: 748px) {
+  .home > .contact-email > .email-container > .email-input {
+    font-size: 0.875rem;
+    line-height: 1.3125rem;
+  }
+}
+.home > .contact-email > .email-container > .join {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
+  text-transform: initial;
+  color: #f2f2f2;
+  cursor: pointer;
+  background: #2d9cdb;
+  border-radius: 0.75rem;
+  border: none;
+  padding: 0.6875rem 1.6875rem;
+  transition: all 0.3s ease;
+}
+.home > .contact-email > .email-container > .join:hover {
+  filter: contrast(200%);
+}
+@media screen and (max-width: 748px) {
+  .home > .contact-email > .email-container > .join {
+    font-size: 0.875rem;
+    line-height: 1.3125rem;
+  }
+}
+
 body {
   max-width: 1240px;
   margin: 0 auto;
@@ -299,6 +552,9 @@ body {
   body {
     padding: 0.5rem;
   }
+}
+body .scroll-body {
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */

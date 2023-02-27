@@ -2,6 +2,7 @@
 @use 'normalize';
 @use 'icons';
 @use './partials/header';
+@use './partials/home';
 
 body{
     max-width: 1240px;
@@ -18,6 +19,10 @@ body{
         &{
             padding: 0.5rem;
         }
+    }
+
+    .scroll-body{
+        overflow: hidden;
     }
 }
 

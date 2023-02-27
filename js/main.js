@@ -23,13 +23,16 @@ $("document").ready(function() {
 
     $('.menu-icon').click(function() {
         $('.header-nav').addClass('open-nav');
+        $('body').addClass('scroll-body');
     });
 
     $('.close-icon').click(function() {
         $('.header-nav').removeClass('open-nav');
+        $('body').removeClass('scroll-body');
     });
 
     $('.item').click(function() {
         $('.header-nav').removeClass('open-nav');
+        $('body').removeClass('scroll-body');
     });
 });

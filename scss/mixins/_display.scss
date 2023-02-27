@@ -1,0 +1,18 @@
+@use '../variables';
+@use '../functions/converts';
+
+@mixin flex(
+    $display: flex, 
+    $flex-flow: row nowrap,
+    $justify-content: start,
+    $align-items: flex-start,
+    $gap: 16,
+    $flex: 0 1 auto,
+    ){
+        display: $display;
+        flex-flow: $flex-flow;
+        justify-content: $justify-content;
+        align-items: $align-items;
+        gap: converts.pixels-rem($gap);
+        flex: $flex;
+}

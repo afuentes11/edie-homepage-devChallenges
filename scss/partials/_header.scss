@@ -1,18 +1,27 @@
 @use '../variables';
 @use '../mixins/font';
+@use '../mixins/display';
 
 
 .header{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
+
+    @include display.flex(
+        $flex-flow: row wrap,
+        $justify-content: space-between,
+        $align-items: center
+    );
 
     &-logo{
-        @include font.font($font-family: variables.$font-title, $font-weight: 800, $line-height: 53);
-        text-transform: none;
-        display: flex;
-        flex-flow: row nowrap;
+        @include font.font(
+            $font-family: variables.$font-title, 
+            $font-weight: 800, 
+            $line-height: 53, 
+            $text-transform: none,
+        );
+
+        @include display.flex(
+            $gap:0
+        );
 
 
         & .jello{
@@ -50,9 +59,6 @@
                 transform: scale3d(1, 1, 1);
             }
         }
-
-        
-
     }
 
 
@@ -88,7 +94,7 @@
 
         @media screen and (max-width: 860px) {
             &{
-                position: absolute;
+                position:fixed;
                 left: 0;
                 top: 0;
                 width: 0vw;
@@ -107,11 +113,12 @@
         }
 
         & > .items{
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: space-between;
-            align-items: center;
-            gap: 2rem;
+
+            @include display.flex(
+                $justify-content: center,
+                $align-items: center,
+                $gap: 32,
+            );
     
             @media screen and (max-width: 860px) {
                 &{
