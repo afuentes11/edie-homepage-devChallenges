@@ -3,6 +3,8 @@
 @use 'icons';
 @use './partials/header';
 @use './partials/home';
+@use './mixins/display';
+@use './functions/converts';
 
 body{
     max-width: 1240px;
@@ -24,5 +26,23 @@ body{
     .scroll-body{
         overflow: hidden;
     }
+
+    & > main{
+        @include display.flex(
+            $flex-flow: column nowrap,
+            $gap: 45,
+        );
+        
+        margin: converts.pixels-rem(90) 0;
+    
+        @media screen and (max-width: 748px){
+            &{
+                margin: converts.pixels-rem(40) 0;
+                gap: 20rem;
+            }
+        }
+    }
 }
+
+
 

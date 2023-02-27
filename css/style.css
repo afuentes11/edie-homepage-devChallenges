@@ -298,11 +298,9 @@ table {
   align-items: flex-start;
   gap: 2.625rem;
   flex: 0 1 auto;
-  margin: 5.625rem 0;
 }
 @media screen and (max-width: 748px) {
   .home {
-    margin: 2.5rem 0;
     gap: 1rem;
   }
 }
@@ -555,6 +553,21 @@ body {
 }
 body .scroll-body {
   overflow: hidden;
+}
+body > main {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: start;
+  align-items: flex-start;
+  gap: 2.8125rem;
+  flex: 0 1 auto;
+  margin: 5.625rem 0;
+}
+@media screen and (max-width: 748px) {
+  body > main {
+    margin: 2.5rem 0;
+    gap: 20rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -9,11 +9,9 @@
         $flex-flow: column nowrap,
         $gap: 42,
     );
-    margin: converts.pixels-rem(90) 0;
-
+    
     @media screen and (max-width: 748px){
         &{
-            margin: converts.pixels-rem(40) 0;
             gap: 1rem;
         }
     }
