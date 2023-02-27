@@ -1,0 +1,23 @@
+@use 'root';
+@use 'normalize';
+@use 'icons';
+@use './partials/header';
+
+body{
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 2rem 0;
+
+    @media screen and (max-width: 1304px){
+        &{
+            padding: 2rem;
+        }
+    }
+
+    @media screen and (max-width: 748px){
+        &{
+            padding: 0.5rem;
+        }
+    }
+}
+

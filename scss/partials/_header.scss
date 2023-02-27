@@ -1,0 +1,193 @@
+@use '../variables';
+@use '../mixins/font';
+
+
+.header{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    &-logo{
+        @include font.font($font-family: variables.$font-title, $font-weight: 800, $line-height: 53);
+        text-transform: none;
+        display: flex;
+        flex-flow: row nowrap;
+
+
+        & .jello{
+            animation: jello-vertical 0.9s both;
+        }
+
+
+        @keyframes jello-vertical {
+            0% {
+                -webkit-transform: scale3d(1, 1, 1);
+                    transform: scale3d(1, 1, 1);
+            }
+            30% {
+                -webkit-transform: scale3d(0.75, 1.25, 1);
+                    transform: scale3d(0.75, 1.25, 1);
+            }
+            40% {
+                -webkit-transform: scale3d(1.25, 0.75, 1);
+                    transform: scale3d(1.25, 0.75, 1);
+            }
+            50% {
+                -webkit-transform: scale3d(0.85, 1.15, 1);
+                transform: scale3d(0.85, 1.15, 1);
+            }
+            65% {
+                -webkit-transform: scale3d(1.05, 0.95, 1);
+                transform: scale3d(1.05, 0.95, 1);
+            }
+            75% {
+                -webkit-transform: scale3d(0.95, 1.05, 1);
+                transform: scale3d(0.95, 1.05, 1);
+            }
+            100% {
+                -webkit-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1);
+            }
+        }
+
+        
+
+    }
+
+
+    & .menu-icon{
+        display: none;
+
+        @media screen and (max-width: 860px) {
+            &{
+                display: block;
+            }
+        }
+    }
+
+    &-nav{
+
+        & .close-icon{
+            position: absolute;
+            right: 2rem;
+            top: 2.7rem;
+            display: none;
+
+            @media screen and (max-width: 860px) {
+                &{
+                    display: block;
+                }
+            }
+
+            @media screen and (max-width: 748px) {
+                right: 0.5rem;
+                top: 1rem;
+            }
+        }
+
+        @media screen and (max-width: 860px) {
+            &{
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 0vw;
+                height: 100vh;
+                transform: translateX(-110vw);
+                z-index: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: variables.$color-white;
+                transition: all 0.8s ease;
+                -webkit-box-shadow: 24px 0px 22px -2px rgba(0,0,0,0.31);
+                -moz-box-shadow: 24px 0px 22px -2px rgba(0,0,0,0.31);
+                box-shadow: 24px 0px 22px -2px rgba(0,0,0,0.31);
+            }
+        }
+
+        & > .items{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+    
+            @media screen and (max-width: 860px) {
+                &{
+                    overflow: hidden;
+                    flex-flow: column nowrap;
+                }
+            }
+    
+            & .item{
+                @include font.font($font-size: 24, $line-height: 36);
+                text-decoration: none;
+                transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+                transition-duration: 400ms;
+                transition-property: color;
+                position: relative;
+    
+                &::after{
+                    content: "";
+                    pointer-events: none;
+                    bottom: 0px;
+                    left: 50%;
+                    position: absolute;
+                    width: 0%;
+                    height: 0.125rem;
+                    background-color: variables.$color-gray-1;
+                    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+                    transition-duration: 400ms;
+                    transition-property: width, left;
+                }
+                &:hover::after{
+                    width: 100%;
+                    left: 0%;
+                }
+            }
+        }
+    }
+}
+
+@for $i from 1 through 4{
+    .jump-item:nth-child(#{$i}) {
+        animation: jump 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation-delay:0.8s +  0.2s * $i;
+    }
+}
+
+@for $i from 1 through 4{
+    .jump:nth-child(#{$i}) {
+        animation: jump 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation-delay:0.2s * $i;
+    }
+}
+
+@keyframes jump {
+    0% {
+        -webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
+                transform: translateY(-600px) rotateX(-30deg) scale(0);
+        -webkit-transform-origin: 50% 100%;
+                transform-origin: 50% 100%;
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0) rotateX(0) scale(1);
+                transform: translateY(0) rotateX(0) scale(1);
+        -webkit-transform-origin: 50% 1400px;
+                transform-origin: 50% 1400px;
+        opacity: 1;
+    }
+}
+
+.open-nav {
+    transform: translateX(0vw);
+    width: unset;
+
+    @media screen and (max-width:860px) {
+        &{
+            width: 100vw;
+        }
+    }
+}
