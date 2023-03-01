@@ -5,9 +5,9 @@ $("document").ready(function() {
         $('.header-logo span').removeClass('jump');
     },1500);
 
-    $('.item, .menu-icon').addClass('jump-item');
+    $('.header-nav > .items .item, .menu-icon').addClass('jump-item');
     setTimeout(function() {
-        $('.item').removeClass('jump-item');
+        $('.header-nav > .items .item').removeClass('jump-item');
         $('.menu-icon').removeClass('jump-item');
     },2000);
 

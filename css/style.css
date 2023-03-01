@@ -7,6 +7,7 @@
   color: #333333;
   font-weight: 500;
   background-color: #ffffff;
+  scroll-behavior: smooth;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -291,6 +292,62 @@ table {
   }
 }
 
+.scroll-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 0.8rem;
+}
+.scroll-bar > .scroll-bar-nav {
+  height: 100%;
+}
+.scroll-bar > .scroll-bar-nav > .items {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0rem;
+  flex: 0 1 auto;
+  height: 100%;
+  width: 100%;
+}
+.scroll-bar > .scroll-bar-nav > .items > li {
+  width: 100%;
+  height: 100%;
+  flex-grow: 1;
+  position: relative;
+}
+.scroll-bar > .scroll-bar-nav > .items .item {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  text-transform: capitalize;
+  color: #ffffff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-decoration: none;
+  writing-mode: vertical-rl;
+  white-space: nowrap;
+  background: #f2f2f2;
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+.scroll-bar > .scroll-bar-nav > .items .item2 {
+  position: absolute;
+  top: 0;
+  right: 0rem;
+  bottom: 0;
+  left: -0.5rem;
+  background: #2d9cdb;
+  filter: contrast(200%);
+  border-radius: 1rem 0 0 1rem;
+}
+
 .home {
   display: flex;
   flex-flow: column nowrap;
@@ -298,10 +355,13 @@ table {
   align-items: flex-start;
   gap: 2.625rem;
   flex: 0 1 auto;
+  min-height: calc(100vh - 4rem);
+  padding: 5.625rem 0;
 }
 @media screen and (max-width: 748px) {
   .home {
     gap: 1rem;
+    padding: 2.5rem 0;
   }
 }
 .home > .home-text {
@@ -536,19 +596,200 @@ table {
   }
 }
 
+.services {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2.625rem;
+  flex: 0 1 auto;
+  margin: 0 auto;
+  width: 90%;
+  min-height: 100vh;
+}
+@media screen and (max-width: 840px) {
+  .services {
+    width: 100%;
+  }
+}
+.services > .main {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.25rem;
+  line-height: 3.375rem;
+  text-transform: none;
+  color: #333333;
+  max-width: 21.625rem;
+  margin-left: 0;
+}
+@media screen and (max-width: 748px) {
+  .services > .main {
+    max-width: 16.1875rem;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    margin-left: 6.25rem;
+  }
+}
+@media screen and (max-width: 560px) {
+  .services > .main {
+    margin-left: 1.875rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .services > .main {
+    margin-left: 0.9375rem;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    max-width: 13.75rem;
+  }
+}
+.services > .cards {
+  align-self: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 0 1 auto;
+}
+.services > .cards > .card {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: start;
+  align-items: flex-start;
+  gap: 1.5rem;
+  flex: 0 1 auto;
+  padding: 2.5rem 1.875rem;
+  transform-origin: center;
+  transition: all 0.1s ease;
+}
+.services > .cards > .card:hover {
+  box-shadow: 0px 10px 30px rgba(51, 51, 51, 0.1);
+  border-radius: 24px;
+  transition: all 0.5s ease;
+  transform: scale(1.01);
+}
+.services > .cards > .card:nth-child(1) > .icon-container {
+  background-color: #2d9cdb;
+}
+.services > .cards > .card:nth-child(2) > .icon-container {
+  background-color: #27AE60;
+}
+.services > .cards > .card:nth-child(3) > .icon-container {
+  background-color: #EB5757;
+}
+.services > .cards > .card > .icon-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex: 0 1 auto;
+  border-radius: 1rem;
+  height: 4.1875rem;
+  width: 4.1875rem;
+}
+.services > .cards > .card > .icon-container > .card-icon {
+  color: #ffffff;
+  font-size: 2rem;
+}
+.services > .cards > .card > .title {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  text-transform: none;
+  color: #333333;
+}
+.services > .cards > .card > .description {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-transform: none;
+  color: #4f4f4f;
+  max-width: 17.0625rem;
+}
+.services > .cards > .card > .started {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-transform: initial;
+  color: #828282;
+  cursor: pointer;
+  background: #e0e0e0;
+  border-radius: 0.75rem;
+  border: none;
+  padding: 0.5625rem 0.75rem;
+  transition: all 0.3s ease;
+}
+.services > .cards > .card > .started:hover {
+  filter: contrast(200%);
+}
+.services > .cards > .card:hover > .started {
+  color: #ffffff;
+  cursor: pointer;
+  background: #2d9cdb;
+  border-radius: 0.75rem;
+  animation: shake-top 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}
+@media screen and (max-width: 320px) {
+  .services > .cards > .card > .title {
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+  }
+  .services > .cards > .card > .description {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@keyframes shake-top {
+  0%, 100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+  }
+  10% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
+  20%, 40%, 60% {
+    -webkit-transform: rotate(-4deg);
+    transform: rotate(-4deg);
+  }
+  30%, 50%, 70% {
+    -webkit-transform: rotate(4deg);
+    transform: rotate(4deg);
+  }
+  80% {
+    -webkit-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+  }
+  90% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
+}
 body {
   max-width: 1240px;
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 0 0;
 }
 @media screen and (max-width: 1304px) {
   body {
-    padding: 2rem;
+    padding: 0 2rem;
   }
 }
 @media screen and (max-width: 748px) {
   body {
-    padding: 0.5rem;
+    padding: 0 0.5rem;
   }
 }
 body .scroll-body {
@@ -559,15 +800,18 @@ body > main {
   flex-flow: column nowrap;
   justify-content: start;
   align-items: flex-start;
-  gap: 2.8125rem;
+  gap: 1rem;
   flex: 0 1 auto;
-  margin: 5.625rem 0;
 }
-@media screen and (max-width: 748px) {
-  body > main {
-    margin: 2.5rem 0;
-    gap: 20rem;
-  }
+
+::-webkit-scrollbar {
+  width: 0rem;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #e0e0e0;
+  border-radius: 16px;
 }
 
 /*# sourceMappingURL=style.css.map */

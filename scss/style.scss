@@ -1,25 +1,30 @@
 @use 'root';
 @use 'normalize';
 @use 'icons';
+@use './variables';
+
 @use './partials/header';
+@use './partials/scroll-bar';
 @use './partials/home';
+@use './partials/services';
+
 @use './mixins/display';
 @use './functions/converts';
 
 body{
     max-width: 1240px;
     margin: 0 auto;
-    padding: 2rem 0;
+    padding: 0 0;
 
     @media screen and (max-width: 1304px){
         &{
-            padding: 2rem;
+            padding: 0 2rem;
         }
     }
 
     @media screen and (max-width: 748px){
         &{
-            padding: 0.5rem;
+            padding: 0 0.5rem;
         }
     }
 
@@ -30,19 +35,20 @@ body{
     & > main{
         @include display.flex(
             $flex-flow: column nowrap,
-            $gap: 45,
         );
         
-        margin: converts.pixels-rem(90) 0;
-    
-        @media screen and (max-width: 748px){
-            &{
-                margin: converts.pixels-rem(40) 0;
-                gap: 20rem;
-            }
-        }
+        
     }
 }
 
+::-webkit-scrollbar {
+    width: 0rem;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: variables.$color-gray-5;
+    border-radius: 16px;
+}
 
 

@@ -37,8 +37,24 @@
       </ul>
     </nav>
   </header>
-  <main>
-    <section class="home">
+
+<!-- 
+  barra lateral para navegar
+  <div class="scroll-bar">
+    <nav class="scroll-bar-nav">
+      <ul class="items">
+        <li><a href="#home" class="item" data-text="home"></a></li>
+        <li><a href="#services" class="item" data-text="services"></a></li>
+        <li><a href="#our-work" class="item" data-text="our works"></a></li>
+        <li><a href="#clients" class="item" data-text="clients"></a></li>
+        <li><a href="#contact" class="item" data-text="contact"></a></li>
+      </ul>
+    </nav>
+  </div>
+-->
+
+  <main class = "principal">
+    <section id="home" class="home">
       <div class="title home-text">
         <p class="support-text">Unhappy with your website?</p>
         <h1 class="main-text">We create beautiful and fast web services</h1>
@@ -56,9 +72,58 @@
         </div>
       </div>
     </section>
+    <section id="services" class="services">
+      <h3 class="main">We offer high demand services</h3>
+      <div class="cards">
+        <div class="card">
+          <div class="icon-container">
+            <span class="material-icons-round card-icon">
+              create
+            </span>
+          </div>
+          <h2 class="title">UI/UX Design</h2>
+          <p class="description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac nulla consequat aliquet id quis turpis.
+          </p>
+          <button class="started">
+            Get started
+          </button>
+        </div>
+        <div class="card">
+          <div class="icon-container">
+            <span class="material-icons-round card-icon">
+              code
+            </span>
+          </div>
+          <h2 class="title">Front End</h2>
+          <p class="description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac nulla consequat aliquet id quis turpis.
+          </p>
+          <button class="started">
+            Get started
+          </button>
+        </div>
+        <div class="card">
+          <div class="icon-container">
+            <span class="material-icons-round card-icon">
+              storage
+            </span>
+          </div>
+          <h2 class="title">Back End</h2>
+          <p class="description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac nulla consequat aliquet id quis turpis.
+          </p>
+          <button class="started">
+            Get started
+          </button>
+        </div>
+        
+      </div>
+    </section>
   </main>
 
   <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
+  <script src="js/scroll-bar.js"></script>
 </body>
 </html>
