@@ -11,12 +11,17 @@
     );
     margin: 0 auto;
     width: 90%;
-    min-height: 100vh;
+    min-height: 85vh;
+    padding: converts.pixels-rem(16) 0;
 
     @media screen and (max-width: 840px){
         &{
             width: 100%;
         }
+    }
+
+    @media screen and (max-height: 900px) {
+        min-height: 100vh;
     }
 
 

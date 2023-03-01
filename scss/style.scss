@@ -7,12 +7,13 @@
 @use './partials/scroll-bar';
 @use './partials/home';
 @use './partials/services';
+@use './partials/our-works';
 
 @use './mixins/display';
 @use './functions/converts';
 
 body{
-    max-width: 1240px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 0;
 
@@ -42,7 +43,7 @@ body{
 }
 
 ::-webkit-scrollbar {
-    width: 0rem;
+    width: 0.5rem;
     background-color: transparent;
 }
 

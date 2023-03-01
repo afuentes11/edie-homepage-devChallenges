@@ -9,13 +9,13 @@
         $flex-flow: column nowrap,
         $gap: 42,
     );
-    min-height: calc(100vh - 4rem);
+
     padding: converts.pixels-rem(90) 0;
 
     @media screen and (max-width: 748px){
         &{
             gap: 1rem;
-            padding: converts.pixels-rem(40) 0;
+            padding: converts.pixels-rem(40) 0 converts.pixels-rem(100);
         }
     }
     

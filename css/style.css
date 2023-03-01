@@ -29,6 +29,7 @@ time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  text-decoration: none;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -355,13 +356,12 @@ table {
   align-items: flex-start;
   gap: 2.625rem;
   flex: 0 1 auto;
-  min-height: calc(100vh - 4rem);
   padding: 5.625rem 0;
 }
 @media screen and (max-width: 748px) {
   .home {
     gap: 1rem;
-    padding: 2.5rem 0;
+    padding: 2.5rem 0 6.25rem;
   }
 }
 .home > .home-text {
@@ -605,11 +605,17 @@ table {
   flex: 0 1 auto;
   margin: 0 auto;
   width: 90%;
-  min-height: 100vh;
+  min-height: 85vh;
+  padding: 1rem 0;
 }
 @media screen and (max-width: 840px) {
   .services {
     width: 100%;
+  }
+}
+@media screen and (max-height: 900px) {
+  .services {
+    min-height: 100vh;
   }
 }
 .services > .main {
@@ -777,8 +783,234 @@ table {
     transform: rotate(2deg);
   }
 }
+.our-works {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3rem;
+  flex: 0 1 auto;
+  margin: 0 auto;
+  width: 90%;
+  min-height: 100vh;
+  padding: 2.5rem 0 2rem;
+  position: relative;
+}
+@media screen and (max-width: 840px) {
+  .our-works {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 560px) {
+  .our-works {
+    gap: 32;
+  }
+}
+.our-works > .main {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.25rem;
+  line-height: 3.375rem;
+  text-transform: none;
+  color: #333333;
+  max-width: 28rem;
+  margin-left: 0;
+}
+@media screen and (max-width: 748px) {
+  .our-works > .main {
+    max-width: 16.6875rem;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    margin-left: 6.25rem;
+  }
+}
+@media screen and (max-width: 560px) {
+  .our-works > .main {
+    margin-left: 1.875rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .our-works > .main {
+    margin-left: 0.9375rem;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    max-width: 13.75rem;
+  }
+}
+.our-works > .cards {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0rem;
+  flex: 0 1 auto;
+}
+@media screen and (max-width: 560px) {
+  .our-works > .cards {
+    gap: 2rem;
+  }
+}
+.our-works > .cards > .card {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: start;
+  align-items: flex-start;
+  gap: 1.25rem;
+  flex: 0 1 auto;
+  width: 49%;
+}
+@media screen and (max-width: 560px) {
+  .our-works > .cards > .card {
+    width: 100%;
+  }
+}
+.our-works > .cards > .card:nth-child(2n+1) {
+  margin-top: 8rem;
+}
+@media screen and (max-width: 560px) {
+  .our-works > .cards > .card:nth-child(2n+1) {
+    margin-top: 0;
+  }
+}
+.our-works > .cards > .card > .img-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex: 0 1 auto;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0.75rem;
+}
+.our-works > .cards > .card > .img-container > .img {
+  width: 100%;
+  transform-origin: center;
+  transition: 0.3s all ease;
+  transform: scale(1.01);
+}
+.our-works > .cards > .card > .text-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: start;
+  align-items: flex-start;
+  gap: 0rem;
+  flex: 0 1 auto;
+  transition: 0.3s all ease;
+}
+.our-works > .cards > .card > .text-container > .support-text {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 1.3125rem;
+  text-transform: none;
+  color: #828282;
+}
+.our-works > .cards > .card > .text-container > .main-text {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  text-transform: none;
+  color: #333333;
+}
+@media screen and (max-width: 748px) {
+  .our-works > .cards > .card > .text-container > .support-text {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+  }
+  .our-works > .cards > .card > .text-container > .main-text {
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+  }
+}
+.our-works > .cards > .card:hover > .img-container > .img {
+  transform: scale(1.1) rotate(1deg);
+}
+.our-works > .cards > .card:hover > .text-container {
+  transform: translateX(1.5rem);
+}
+.our-works > .cards > .card:hover > .text-container > .main-text {
+  color: #2d9cdb;
+}
+.our-works > .container-more-info {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: start;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 0 1 auto;
+  position: absolute;
+  right: 0;
+  bottom: 2rem;
+}
+@media screen and (max-width: 560px) {
+  .our-works > .container-more-info {
+    position: relative;
+    right: unset;
+    bottom: unset;
+  }
+}
+.our-works > .container-more-info > .more-info-text {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  text-transform: none;
+  color: #2d9cdb;
+  position: relative;
+}
+@media screen and (max-width: 748px) {
+  .our-works > .container-more-info > .more-info-text {
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+  }
+}
+.our-works > .container-more-info > .more-info-text::before {
+  content: "see more";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 0%;
+  z-index: 2;
+  color: #2d9cdb;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  filter: contrast(200%);
+}
+.our-works > .container-more-info > .arrow-icon {
+  font-size: 1.5rem;
+  color: #2d9cdb;
+}
+.our-works > .container-more-info:hover > .more-info-text::before {
+  width: 100%;
+}
+.our-works > .container-more-info:hover > .arrow-icon {
+  animation: move 2s infinite forwards 0.2s;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+    filter: contrast(200%);
+  }
+  50% {
+    transform: translateX(0.5em);
+    filter: contrast(100%);
+  }
+  100% {
+    transform: translateX(0);
+    filter: contrast(200%);
+  }
+}
 body {
-  max-width: 1240px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 0;
 }
@@ -805,7 +1037,7 @@ body > main {
 }
 
 ::-webkit-scrollbar {
-  width: 0rem;
+  width: 0.5rem;
   background-color: transparent;
 }
 
