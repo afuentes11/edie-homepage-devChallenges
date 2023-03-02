@@ -1,0 +1,116 @@
+@use '../variables';
+@use '../mixins/font';
+@use '../mixins/display';
+@use '../functions/converts';
+
+.comments{
+    @include display.flex(
+        $flex-flow: column nowrap,
+        $gap: 50
+    );
+    margin: 0 auto;
+    width: 90%;
+    position: relative;
+    padding: converts.pixels-rem(16) 0;
+    max-height: converts.pixels-rem(640);
+    margin-top: 4rem;
+
+    @media screen and (max-width: 840px){
+        &{
+            width: 100%;
+        }
+    }
+
+    & > .main-text{
+        @include font.font();
+        max-width: converts.pixels-rem(937);
+
+        @media screen and (max-width: 748px){  
+            &{
+                font-size: converts.pixels-rem(24);
+                line-height: converts.pixels-rem(36);
+            }
+        }
+
+        @media screen and (max-width: 320px){
+            &{
+                font-size: converts.pixels-rem(20);
+                line-height: converts.pixels-rem(30);
+            }
+        }
+    }
+
+    & > .client-container{
+        @include display.flex(
+            $gap: 30
+        );
+
+        @media screen and (max-width: 320px){
+    
+            &{
+                gap: converts.pixels-rem(20);
+            }
+        }
+
+        & > .photo{
+            width: converts.pixels-rem(80);
+            height: converts.pixels-rem(80);
+            border-radius: converts.pixels-rem(12);
+            align-self: center;
+
+            @media screen and (max-width: 320px){
+    
+                &{
+                    width: converts.pixels-rem(60);
+                    height: converts.pixels-rem(60);
+                }
+            }
+        }
+
+        & > .description{
+            @include display.flex(
+                $flex-flow: column nowrap,
+                $gap: 12
+            );
+            align-self: center;
+
+            @media screen and (max-width: 320px){
+    
+                &{
+                    gap: converts.pixels-rem(4);
+                }
+            }
+
+            & > .name{
+                @include font.font(
+                    $text-transform: capitalize,
+                    $font-size: 24,
+                    $line-height: 36,
+                );
+            }
+
+            & > .company{
+                @include font.font(
+                    $text-transform: capitalize,
+                    $font-size: 18,
+                    $line-height: 27,
+                    $color: variables.$color-gray-3,
+                );
+            }
+    
+            @media screen and (max-width: 320px){
+    
+                & > .title{
+                    font-size: converts.pixels-rem(18);
+                    line-height: converts.pixels-rem(27);
+                }
+
+                & > .company{
+                    font-size: converts.pixels-rem(12);
+                    line-height: converts.pixels-rem(18);
+                }
+            }
+            
+        }
+    }
+}

@@ -605,17 +605,17 @@ table {
   flex: 0 1 auto;
   margin: 0 auto;
   width: 90%;
-  min-height: 85vh;
   padding: 1rem 0;
+  margin-top: 3rem;
+}
+@media screen and (min-width: 1200px) {
+  .services {
+    height: 560px;
+  }
 }
 @media screen and (max-width: 840px) {
   .services {
     width: 100%;
-  }
-}
-@media screen and (max-height: 900px) {
-  .services {
-    min-height: 100vh;
   }
 }
 .services > .main {
@@ -792,7 +792,7 @@ table {
   flex: 0 1 auto;
   margin: 0 auto;
   width: 90%;
-  min-height: 100vh;
+  margin-top: 2rem;
   padding: 2.5rem 0 2rem;
   position: relative;
 }
@@ -1009,6 +1009,258 @@ table {
     filter: contrast(200%);
   }
 }
+.clients {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  flex: 0 1 auto;
+  margin: 0 auto;
+  width: 90%;
+  position: relative;
+  padding: 1rem 0;
+  max-height: 40rem;
+  margin-top: 4rem;
+}
+@media screen and (max-width: 840px) {
+  .clients {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 748px) {
+  .clients {
+    gap: 2rem;
+    flex-flow: column nowrap;
+    max-height: unset;
+  }
+}
+.clients > .text-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.4375rem;
+  flex: 0 1 auto;
+  align-self: center;
+}
+@media screen and (max-width: 748px) {
+  .clients > .text-container {
+    justify-content: start;
+    align-items: flex-start;
+    flex-flow: column nowrap;
+    align-self: auto;
+  }
+}
+.clients > .text-container > .support {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
+  text-transform: none;
+  color: #EB5757;
+}
+.clients > .text-container > .title {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.25rem;
+  line-height: 3.375rem;
+  text-transform: none;
+  color: #333333;
+  width: 17.5rem;
+}
+.clients > .text-container > .description {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-transform: none;
+  color: #4f4f4f;
+  width: 17.5rem;
+}
+@media screen and (max-width: 748px) {
+  .clients > .text-container > .support {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+  }
+  .clients > .text-container > .title {
+    max-width: 13.125rem;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .clients > .text-container > .support {
+    font-size: 0.6875rem;
+    line-height: 1rem;
+  }
+  .clients > .text-container > .title {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    max-width: 11.875rem;
+  }
+  .clients > .text-container > .description {
+    max-width: 12.5rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+.clients > .img-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: start;
+  align-items: flex-start;
+  gap: 1.5rem;
+  flex: 0 1 auto;
+  align-self: center;
+}
+.clients > .img-container > .left-side {
+  align-self: center;
+}
+.clients > .img-container > .right-side {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: start;
+  align-items: flex-start;
+  gap: 1.5rem;
+  flex: 0 1 auto;
+  align-self: center;
+}
+.clients > .img-container > .right-side > .img:nth-child(1) {
+  width: 90%;
+}
+.clients > .img-container img {
+  border-radius: 1.5rem;
+  width: 100%;
+  transition: 0.3s all ease;
+}
+@media screen and (max-width: 320px) {
+  .clients > .img-container, .clients > .img-container > .right-side {
+    gap: 0.75rem;
+  }
+  .clients > .img-container img {
+    border-radius: 1rem;
+  }
+}
+.clients > .img-container:hover img {
+  filter: brightness(70%);
+}
+.clients > .img-container:hover img:hover {
+  filter: brightness(110%);
+}
+
+.comments {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: start;
+  align-items: flex-start;
+  gap: 3.125rem;
+  flex: 0 1 auto;
+  margin: 0 auto;
+  width: 90%;
+  position: relative;
+  padding: 1rem 0;
+  max-height: 40rem;
+  margin-top: 4rem;
+}
+@media screen and (max-width: 840px) {
+  .comments {
+    width: 100%;
+  }
+}
+.comments > .main-text {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.25rem;
+  line-height: 3.375rem;
+  text-transform: capitalize;
+  color: #333333;
+  max-width: 58.5625rem;
+}
+@media screen and (max-width: 748px) {
+  .comments > .main-text {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .comments > .main-text {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+  }
+}
+.comments > .client-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: start;
+  align-items: flex-start;
+  gap: 1.875rem;
+  flex: 0 1 auto;
+}
+@media screen and (max-width: 320px) {
+  .comments > .client-container {
+    gap: 1.25rem;
+  }
+}
+.comments > .client-container > .photo {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 0.75rem;
+  align-self: center;
+}
+@media screen and (max-width: 320px) {
+  .comments > .client-container > .photo {
+    width: 3.75rem;
+    height: 3.75rem;
+  }
+}
+.comments > .client-container > .description {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: start;
+  align-items: flex-start;
+  gap: 0.75rem;
+  flex: 0 1 auto;
+  align-self: center;
+}
+@media screen and (max-width: 320px) {
+  .comments > .client-container > .description {
+    gap: 0.25rem;
+  }
+}
+.comments > .client-container > .description > .name {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  text-transform: capitalize;
+  color: #333333;
+}
+.comments > .client-container > .description > .company {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
+  text-transform: capitalize;
+  color: #828282;
+}
+@media screen and (max-width: 320px) {
+  .comments > .client-container > .description > .title {
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+  }
+  .comments > .client-container > .description > .company {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+  }
+}
+
 body {
   max-width: 1200px;
   margin: 0 auto;
