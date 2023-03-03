@@ -4,33 +4,20 @@
 @use './variables';
 
 @use './partials/header';
-@use './partials/scroll-bar';
+@use './partials/return-to-up';
 @use './partials/home';
 @use './partials/services';
 @use './partials/our-works';
 @use './partials/clients';
 @use './partials/comments';
+@use './partials/footer';
 
 @use './mixins/display';
 @use './functions/converts';
 
 body{
-    max-width: 1200px;
-    margin: 0 auto;
+    margin: 0;
     padding: 0 0;
-
-    @media screen and (max-width: 1304px){
-        &{
-            padding: 0 2rem;
-        }
-    }
-
-    @media screen and (max-width: 748px){
-        &{
-            padding: 0 0.5rem;
-        }
-    }
-
     .scroll-body{
         overflow: hidden;
     }
@@ -39,6 +26,22 @@ body{
         @include display.flex(
             $flex-flow: column nowrap,
         );
+
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 0;
+
+            @media screen and (max-width: 1304px){
+                &{
+                    padding: 0 2rem;
+                }
+            }
+
+            @media screen and (max-width: 748px){
+                &{
+                    padding: 0 0.5rem;
+                }
+            }
         
         
     }
@@ -47,10 +50,11 @@ body{
 ::-webkit-scrollbar {
     width: 0.5rem;
     background-color: transparent;
+    transition: all 1s linear;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: variables.$color-gray-5;
+    background-color: variables.$color-gray-4;
     border-radius: 16px;
 }
 

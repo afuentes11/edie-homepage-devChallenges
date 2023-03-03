@@ -1,0 +1,289 @@
+@use '../variables';
+@use '../mixins/font';
+@use '../mixins/display';
+@use '../functions/converts';
+
+.footer {
+
+    background-color: variables.$color-footer;
+    padding: 2rem 0 0.5rem;
+
+
+    & > .container {
+        @include display.flex(
+            $flex-flow: column nowrap,
+            $justify-content: space-between,
+            $align-items: center,
+            $gap: 110,
+        );
+        height: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+
+        @media screen and (max-width: 748px){
+            &{
+                padding: 0 0.5rem;
+            }
+        }
+
+        & > .footer__content{
+            @include display.flex(
+                $flex-flow: row nowrap,
+                $justify-content: space-between,
+            );
+            width: 100%;
+            margin-left: 0;
+            
+
+            @media screen and (max-width: 748px){
+                &{
+                    flex-flow: column nowrap;
+                    justify-content: start;
+                    gap: 2rem;
+                    margin-left: converts.pixels-rem(100);
+                    width: unset;
+                    align-self: flex-start;
+                }
+            }
+    
+            @media screen and (max-width: 560px){
+                &{
+                    margin-left: converts.pixels-rem(30);
+                }
+            }
+    
+            @media screen and (max-width: 320px){
+                &{
+                    margin-left: converts.pixels-rem(15);
+                }
+            }
+
+            & > .footer-nav{
+
+                & > .items{
+                    @include display.flex(
+                        $flex-flow: column nowrap,
+                        $gap:0
+                    );
+
+                    & .item{
+                        @include font.font(
+                            $font-weight: 400,
+                            $font-size: 18, 
+                            $line-height: 36,
+                            $color: variables.$color-gray-6,
+                        );
+                        text-decoration: none;
+                        transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+                        transition-duration: 400ms;
+                        transition-property: color;
+                        position: relative;
+            
+                        &::after{
+                            content: "";
+                            pointer-events: none;
+                            bottom: 0px;
+                            left: 50%;
+                            position: absolute;
+                            width: 0%;
+                            height: 0.125rem;
+                            background-color: variables.$color-gray-6;
+                            transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+                            transition-duration: 400ms;
+                            transition-property: width, left;
+                        }
+                        &:hover::after{
+                            width: 100%;
+                            left: 0%;
+                        }
+                    }
+                }
+
+
+            }
+
+            & > .social-media{
+                @include display.flex(
+                    $flex-flow: column nowrap,
+                    $gap: 12,
+                );
+                width: 300px;
+                @media screen and (max-width: 1080px) {
+                    &{
+                        width: unset;
+                    }
+                }
+
+                & > .social-media__logo{
+                    @include font.font(
+                        $font-family: variables.$font-title, 
+                        $font-weight: 800, 
+                        $line-height: 53, 
+                        $text-transform: none,
+                        $color: variables.$color-gray-6,
+                    );
+                    cursor: default;
+
+                    @include display.flex(
+                        $gap:0
+                    );
+
+
+                    & > .jello{
+                        // esta animacion se encuentra en _header.scss
+                        animation: jello-vertical 0.9s both;
+                    }
+                }
+
+                & > .social-media__container{
+                    @include display.flex(
+                        $gap: 12,
+                    );
+
+                    & > a {
+                        &:hover .social-media__logo{
+                            transform: translateY(-0.5rem);
+                        }
+
+                        & > .social-media__logo{
+                            transition: all 0.3s ease;
+                            &:hover{
+                                transform: translateY(-0.5rem);
+                            }
+                        }
+                    }
+                }
+
+                
+            }
+
+
+            & > .contact-email{
+                @include display.flex(
+                    $flex-flow: column nowrap,
+                    $justify-content: space-between,
+                );
+                width: converts.pixels-rem(366);
+                margin-right: 6rem;
+
+                @media screen and (max-width: 920px) {
+                    &{
+                        margin-right: 2rem;
+                    }
+                }
+
+                @media screen and (max-width: 748px){
+                    &{
+                        width: 100%
+                    }
+                }
+        
+                & > .label{
+                    @include font.font(
+                        $font-weight: 500,
+                        $font-size: 14,
+                        $line-height: 21,
+                        $color: variables.$color-gray-6,
+                        $text-transform: initial
+                    );
+        
+                    @media screen and (max-width: 748px){
+                        &{
+                            font-size: converts.pixels-rem(10);
+                            line-height: converts.pixels-rem(15);
+                        }
+                    }
+                }
+        
+                & > .email-container{
+                    @include display.flex(
+                        $justify-content: space-between,
+                        $align-items: center,
+                        $gap: 8
+                    );
+                    width: calc(100% - 1rem);
+                    padding: converts.pixels-rem(4);
+                    padding-left: converts.pixels-rem(12);
+                    background: variables.$color-gray-6;
+                    border-radius: converts.pixels-rem(12);
+        
+        
+                    & > .email-input{
+                        @include font.font(
+                            $font-size: 18,
+                            $line-height: 27,
+                            $color: variables.$color-gray-2,
+                            $text-transform: initial
+                        );
+                        flex-grow: 1;
+                        border: none;
+                        outline: none;
+                        background-color: transparent;
+                        width: 100%;
+        
+                        &::placeholder{
+                            color: variables.$color-gray-4;
+                        }
+        
+                        @media screen and (max-width: 748px){
+                            &{
+                                font-size: converts.pixels-rem(14);
+                                line-height: converts.pixels-rem(21);
+                            }
+                        }
+                    }
+        
+                    & > .join{
+                        @include font.font(
+                            $font-size: 18,
+                            $line-height: 27,
+                            $color: variables.$color-gray-6,
+                            $text-transform: initial,
+                        );
+                        cursor: pointer;
+                        background: variables.$color-blue;
+                        border-radius: converts.pixels-rem(12);
+                        border: none;
+                        padding: converts.pixels-rem(11) converts.pixels-rem(27);
+                        transition: all 0.3s ease;
+        
+                        &:hover{
+                            filter: contrast(200%);
+                        }
+        
+                        @media screen and (max-width: 748px){
+                            &{
+                                font-size: converts.pixels-rem(14);
+                                line-height: converts.pixels-rem(21);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        & > .text-footer{
+            @include font.font(
+                $font-family: variables.$font-footer, 
+                $font-weight: 500,
+                $font-size: 14,
+                $line-height: 17, 
+                $text-transform: none,
+                $color: variables.$color-gray-6,
+            );
+
+            & > .strong{
+                font-weight: 700;
+                color: variables.$color-gray-6;
+                filter: contrast(200%);
+                transition: 0.3s all ease;
+
+                &:hover {
+                    color: variables.$color-blue;
+                    
+                }
+            }
+        }
+    }
+}

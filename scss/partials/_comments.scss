@@ -12,8 +12,8 @@
     width: 90%;
     position: relative;
     padding: converts.pixels-rem(16) 0;
-    max-height: converts.pixels-rem(640);
-    margin-top: 4rem;
+    max-height: converts.pixels-rem(650);
+    margin: 5rem 0 10rem;
 
     @media screen and (max-width: 840px){
         &{

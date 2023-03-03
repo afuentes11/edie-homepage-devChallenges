@@ -1,8 +1,8 @@
 $("document").ready(function() {
 
-    $('.header-logo span').addClass('jump');
+    $('.header > .header-logo > span').addClass('jump');
     setTimeout(function() {
-        $('.header-logo span').removeClass('jump');
+        $('.header > .header-logo > span').removeClass('jump');
     },1500);
 
     $('.header-nav > .items, .menu-icon').addClass('jump-item');
@@ -12,6 +12,17 @@ $("document").ready(function() {
     },2000);
 
     $('.header-logo > span').each(function() {
+        var $element = $(this);
+        $element.hover(function() {
+            $element.addClass('jello');
+            setTimeout(function() {
+                $element.removeClass('jello');
+            },900);
+        })
+    })
+
+    //pasar al js de footer
+    $('.social-media__logo  span').each(function() {
         var $element = $(this);
         $element.hover(function() {
             $element.addClass('jello');

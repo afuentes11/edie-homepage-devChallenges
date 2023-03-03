@@ -130,6 +130,7 @@
                     $color: variables.$color-gray-2,
                 );
                 max-width: converts.pixels-rem(273);
+                height: 144px;
             }
 
             & > .started{

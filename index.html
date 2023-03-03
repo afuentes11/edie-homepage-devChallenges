@@ -12,7 +12,7 @@
   <title>EDIE HOMEPAGE</title>
 </head>
 <body>
-  <header class="header">
+  <header id="home" class="header">
     <p class="header-logo">
       <span>E</span>
       <span>d</span>
@@ -38,39 +38,30 @@
     </nav>
   </header>
 
-<!-- 
-  barra lateral para navegar
-  <div class="scroll-bar">
-    <nav class="scroll-bar-nav">
-      <ul class="items">
-        <li><a href="#home" class="item" data-text="home"></a></li>
-        <li><a href="#services" class="item" data-text="services"></a></li>
-        <li><a href="#our-work" class="item" data-text="our works"></a></li>
-        <li><a href="#clients" class="item" data-text="clients"></a></li>
-        <li><a href="#contact" class="item" data-text="contact"></a></li>
-      </ul>
-    </nav>
-  </div>
--->
+  <a href="#home" class="return-to-up">
+    <span class="material-icons-round arrow-up-icon">
+        arrow_upward
+    </span>
+  </a>
 
   <main class = "principal">
-    <section id="home" class="home">
+    <section class="home">
       <div class="title home-text">
         <p class="support-text">Unhappy with your website?</p>
         <h1 class="main-text">We create beautiful and fast web services</h1>
       </div>
-      <img src="./img/heroImage.jpg" alt="People concentrating on looking at a blackboard" class="home-img">
+      <img src="img/heroImage.jpg" alt="People concentrating on looking at a blackboard" class="home-img">
       <div class="description home-text">
         <p class="support-text">Story, emotion and purpose</p>
         <h2 class="main_text">We help transform your ideas into real world applications that will outperform your toughest competition and help you achieve your strategic goals in short period of time.</h2>
       </div>
-      <div class="contact-email home-text">
+      <form class="contact-email home-text">
         <label for="email" class="label">Want us to contact you?</label>
         <div class="email-container">
           <input type="email" name="email" id="email" class="email-input" placeholder="Email">
-          <button class="join">Join</button>
+          <button class="join" type="submit">Join</button>
         </div>
-      </div>
+      </form>
     </section>
     <section id="services" class="services">
       <h3 class="main">We offer high demand services</h3>
@@ -82,9 +73,9 @@
             </span>
           </div>
           <h2 class="title">UI/UX Design</h2>
-          <p class="description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac nulla consequat aliquet id quis turpis.
-          </p>
+          <h3 class="description">
+            Enhance Your Digital Experience with Expert UI/UX Design. Let Us Help You Create Engaging Interfaces That Delight Your Users.
+          </h3>
           <button class="started">
             Get started
           </button>
@@ -96,9 +87,9 @@
             </span>
           </div>
           <h2 class="title">Front End</h2>
-          <p class="description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac nulla consequat aliquet id quis turpis.
-          </p>
+          <h3 class="description">
+            Crafting Beautiful and Responsive Interfaces. Let Us Bring Your Digital Vision to Life with Expert Frontend Development and Design.
+          </h3>
           <button class="started">
             Get started
           </button>
@@ -110,9 +101,9 @@
             </span>
           </div>
           <h2 class="title">Back End</h2>
-          <p class="description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac nulla consequat aliquet id quis turpis.
-          </p>
+          <h3 class="description">
+            Powering Your Digital Infrastructure with Robust Backend Development. Trust Us to Build Reliable and Scalable Systems That Support Your Business Growth.
+          </h3>
           <button class="started">
             Get started
           </button>
@@ -125,7 +116,7 @@
       <div class="cards">
         <div class="card">
           <div class="img-container">
-            <img src="./img/smarthome.jpg" alt="Design of an interface for a smart home" class="img">
+            <img src="img/smarthome.jpg" alt="Design of an interface for a smart home" class="img">
           </div>
           <div class="text-container">
             <h4 class="support-text">Full stack application</h4>
@@ -135,7 +126,7 @@
 
         <div class="card">
           <div class="img-container">
-            <img src="./img/onboard.png" alt="Design of an interface for a onboard application" class="img">
+            <img src="img/onboard.png" alt="Design of an interface for a onboard application" class="img">
           </div>
 
           <div class="text-container">
@@ -146,7 +137,7 @@
 
         <div class="card">
           <div class="img-container">
-            <img src="./img/booking.png" alt="Design of an interface for a booking system" class="img">
+            <img src="img/booking.png" alt="Design of an interface for a booking system" class="img">
           </div>
           <div class="text-container">
             <h4 class="support-text">Mobile application</h4>
@@ -156,7 +147,7 @@
 
         <div class="card">
           <div class="img-container">
-            <img src="./img/juice-product.png" alt="Design of an interface for a Juice product homepage" class="img">
+            <img src="img/juice-product.png" alt="Design of an interface for a Juice product homepage" class="img">
           </div>
           <div class="text-container">
             <h4 class="support-text">Front End application</h4>
@@ -174,16 +165,16 @@
     <section id="clients" class="clients">
       <div class="text-container">
         <p class="support">Meet the team</p>
-        <p class="title">We are chilled and a laidback team</p>
-        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <h2 class="title">We are chilled and a laidback team</h2>
+        <h3 class="description">We're a dynamic team of dedicated professionals who are committed to excellence. Let's work together to bring your ideas to life and achieve your goals.</h3>
       </div>
       <div class="img-container">
         <div class="left-side">
-          <img src="./img/person3.png" alt="smiling girl" class="img">
+          <img src="img/person3.png" alt="smiling girl" class="img">
         </div>
         <div class="right-side">
-          <img src="./img/person1.png" alt="smiling guy 1" class="img">
-          <img src="./img/person2.png" alt="smiling guy 2" class="img">
+          <img src="img/person1.png" alt="smiling guy 1" class="img">
+          <img src="img/person2.png" alt="smiling guy 2" class="img">
         </div>
       </div>
     </section>
@@ -192,7 +183,7 @@
         “Fast and outstanding resutls. Edie understands their customer’s needs. They have a young and talented team.”    
       </h3>
       <div class="client-container">
-        <img src="./img/person4.png" alt="customer photo" class="photo">
+        <img src="img/person4.png" alt="customer photo" class="photo">
         <div class="description">
           <p class="name">Carlos Tran</p>
           <p class="company">The Decorate Gatsby</p>
@@ -200,9 +191,52 @@
       </div>
     </section>
   </main>
+  <footer id="contact" class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <nav class="footer-nav">
+          <ul class="items">
+            <li><a href="#home" class="item" data-text="home">home</a></li>
+            <li><a href="#services" class="item" data-text="services">services</a></li>
+            <li><a href="#our-works" class="item" data-text="our works">our works</a></li>
+            <li><a href="#clients" class="item" data-text="clients">clients</a></li>
+            <li><a href="#contact" class="item" data-text="contact">contact</a></li>
+          </ul>
+        </nav>
+        <div class="social-media">
+          <p class="social-media__logo">
+            <span>E</span>
+            <span>d</span>
+            <span>i</span>
+            <span>e</span>
+          </p>
+          <div class="social-media__container">
+            <a href="#instagram">
+              <img src="img/instagram.svg" alt="instagram logo" class="social-media__logo">
+            </a>
+            <a href="#linkedin">
+              <img src="img/linkedin.svg" alt="linkedin logo" class="social-media__logo">
+            </a>
+            <a href="#twitter">
+              <img src="img/twitter.svg" alt="twitter logo" class="social-media__logo">
+            </a>
+          </div>
+        </div>
+        <form class="contact-email">
+          <label for="email" class="label">Want us to contact you?</label>
+          <div class="email-container">
+            <input type="email" name="email" id="email" class="email-input" placeholder="Email">
+            <button class="join" type="submit">Join</button>
+          </div>
+        </form>
+      </div>
+      <p class="text-footer">created by <a class="strong" href="https://github.com/afuentes11" target="_blank">afuentes11</a> - devChallenges.io</p>
+    </div>
+  </footer>
+
 
   <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
-  <script src="js/scroll-bar.js"></script>
+  <script src="js/return_to_up.js"></script>
 </body>
 </html>

@@ -73,7 +73,7 @@
                 $line-height: 24,
                 $color: variables.$color-gray-2,
             );
-            width: converts.pixels-rem(280);
+            width: converts.pixels-rem(320);
         }
 
         @media screen and (max-width: 748px){
