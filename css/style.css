@@ -1672,6 +1672,7 @@ body {
   margin: 0;
   padding: 0 0;
   overflow-x: hidden;
+  user-select: none;
 }
 body .scroll-body {
   overflow: hidden;

@@ -2,7 +2,7 @@
 not visible to the user and the value of the missing view. It also has two methods that return the upper and lower limit of the screen. */
 class Screen {
     constructor(){
-        this.percentage = 0.15;
+        this.percentage = 0.16;
         this.valueOfVisionLost = $(window).height() * this.percentage;
     }
 

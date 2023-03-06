@@ -26,6 +26,7 @@ body{
     .scroll-body{
         overflow: hidden;
     }
+    user-select: none;
 
     & > main{
         @include display.flex(
