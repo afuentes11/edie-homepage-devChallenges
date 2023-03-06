@@ -7,6 +7,7 @@ $("document").ready(function() {
     let countdownInterval;
     let hidenBtnTimeout;
     let previousPosition = $(window).scrollTop();
+    let hidden = false;
 
     $(window).scroll(function() {
         const header_outerHeight = $('.header').outerHeight(true); 
