@@ -1,6 +1,6 @@
 class Screen {
     constructor(){
-        this.percentage = 0.0;
+        this.percentage = 0.15;
         this.valueOfVisionLost = $(window).height() * this.percentage;
     }
 
