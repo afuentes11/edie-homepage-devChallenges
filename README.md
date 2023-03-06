@@ -37,14 +37,17 @@
 
 ## Overview
 
-![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
+<div align="center">
+   <img src="https://github.com/afuentes11/edie-homepage-devChallenges/blob/master/img/desktop%20gif.gif" alt="destop gif" width="70.5%" />
+   <img src="https://github.com/afuentes11/edie-homepage-devChallenges/blob/master/img/mobile%20gif.gif" alt="css3" width="25%" />
+</div>
 
-Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
+The project consists of the creation of a responsive checkout page for an online shop. [The original design](https://www.figma.com/file/4B0x88GhiZvgVlcQPSQ73D?chrome=DOCUMENTATION&embed_host=astra&kind=&node-id=0%3A1&viewer=1) was provided by Devchallenges in the challenge.
 
-- Where can I see your demo?
-- What was your experience?
-- What have you learned/improved?
-- Your wisdom? :)
+The page can be viewed at the following [link](https://afuentes11.github.io/checkout-page-devChallenge/). If you liked the project, give me a star ⭐.
+
+The development of the website was a challenge, despite being a simple form, due to the multiple functionalities it required, such as the implementation of modals, form validation and allowing to be able to vary the quantity of each product.
+For the functionality I used JQUERY, in order to get to know the library and be able to extend my development stack.
 
 ### Built With
 
