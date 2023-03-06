@@ -12,12 +12,16 @@
 @use './partials/comments';
 @use './partials/footer';
 
+@use './animation/initialization';
+@use './animation/animation';
+
 @use './mixins/display';
 @use './functions/converts';
 
 body{
     margin: 0;
     padding: 0 0;
+    overflow-x: hidden;
     .scroll-body{
         overflow: hidden;
     }
@@ -42,8 +46,6 @@ body{
                     padding: 0 0.5rem;
                 }
             }
-        
-        
     }
 }
 

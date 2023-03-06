@@ -4,7 +4,6 @@
 @use '../functions/converts';
 
 .home{
-
     @include display.flex(
         $flex-flow: column nowrap,
         $gap: 42,
@@ -15,7 +14,7 @@
     @media screen and (max-width: 748px){
         &{
             gap: 1rem;
-            padding: converts.pixels-rem(40) 0 converts.pixels-rem(100);
+            padding: converts.pixels-rem(40) 0 converts.pixels-rem(40);
         }
     }
     
@@ -280,4 +279,8 @@
             }
         }
     }
+}
+
+.focus{
+    background-color: aqua;
 }

@@ -15,14 +15,9 @@ $("document").ready(function() {
         var bottomScreen = $(window).scrollTop() + $(window).height(); 
 
         var currentPosition = $(window).scrollTop(); 
-
-        var hiden = false; 
         
         if(topScreen < header_outerHeight || (alturaPantalla - footer_outerHeight) < bottomScreen){
             // evalua si la parte superior de la pantalla esta fuera de la zona del header, o si la zona inferior de la pantalla está fuera de la zona del footer
-
-            
-            console.log($('.return-to-up').hasClass('slide-in-blurred-br') && (! hidden))
             if( $('.return-to-up').hasClass('slide-in-blurred-br') && (! hidden)){
                 hiden_btn_return();
             }

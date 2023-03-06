@@ -124,7 +124,7 @@
                         $color: variables.$color-gray-6,
                     );
                     cursor: default;
-
+                              
                     @include display.flex(
                         $gap:0
                     );
@@ -166,7 +166,7 @@
                 );
                 width: converts.pixels-rem(366);
                 margin-right: 6rem;
-
+               
                 @media screen and (max-width: 920px) {
                     &{
                         margin-right: 2rem;
@@ -187,7 +187,7 @@
                         $color: variables.$color-gray-6,
                         $text-transform: initial
                     );
-        
+
                     @media screen and (max-width: 748px){
                         &{
                             font-size: converts.pixels-rem(10);
