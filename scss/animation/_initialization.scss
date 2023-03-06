@@ -6,62 +6,48 @@
 
 //home
 .home > .title, .home > .description, .home > .contact-email{
-    transform: translateX(-1000px);
     opacity: 0;
 }
 
 .home > img{
-    transform: scale(0);
-    filter: blur(4px);
     opacity: 0;
 }
 
 
 //services
 .services > .main {
-    transform: translateX(-1000px);
     opacity: 0;
 }
 
 .services > .cards > .card{
-    transform: scale(0);
-    filter: blur(4px);
     opacity: 0;
 }
 
 
 //our-works
 .our-works > .main, .our-works > .cards > .card:nth-child(odd) {
-    transform: translateX(-1000px);
     opacity: 0;
 }
 
 .our-works > .container-more-info, .our-works > .cards > .card:nth-child(even) {
-    transform: translateX(1000px);
     opacity: 0;
 }
 
 
 // clients
 .clients > .text-container {
-    transform: translateX(-1000px);
     opacity: 0;
 }
 
 .clients > .img-container img{
-    transform: translateX(1000px);
-        opacity: 0;
+    opacity: 0;
 }
 
 
 
 
 //comments
-.comments > .main-text{
-   
-}
 
 .comments > .client-container{
-    transform: translateX(-1000px);
     opacity: 0;
 }

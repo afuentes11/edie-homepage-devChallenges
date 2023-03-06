@@ -1565,49 +1565,38 @@ table {
 }
 
 .home > .title, .home > .description, .home > .contact-email {
-  transform: translateX(-1000px);
   opacity: 0;
 }
 
 .home > img {
-  transform: scale(0);
-  filter: blur(4px);
   opacity: 0;
 }
 
 .services > .main {
-  transform: translateX(-1000px);
   opacity: 0;
 }
 
 .services > .cards > .card {
-  transform: scale(0);
-  filter: blur(4px);
   opacity: 0;
 }
 
 .our-works > .main, .our-works > .cards > .card:nth-child(odd) {
-  transform: translateX(-1000px);
   opacity: 0;
 }
 
 .our-works > .container-more-info, .our-works > .cards > .card:nth-child(even) {
-  transform: translateX(1000px);
   opacity: 0;
 }
 
 .clients > .text-container {
-  transform: translateX(-1000px);
   opacity: 0;
 }
 
 .clients > .img-container img {
-  transform: translateX(1000px);
   opacity: 0;
 }
 
 .comments > .client-container {
-  transform: translateX(-1000px);
   opacity: 0;
 }
 
@@ -1698,6 +1687,7 @@ body > main {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 0;
+  overflow-x: hidden;
 }
 @media screen and (max-width: 1304px) {
   body > main {
