@@ -5,7 +5,6 @@
  */
 export function writeTextAnimation(selector){
 
-    console.log('hola mundo')
     let $typingText = $(selector);
     let height = $(selector).height();
     $(selector).height(height);

@@ -1,4 +1,4 @@
-import { screen } from "./utils/screen.js";
+import { screen } from "./utils/Screen.js";
 
 $("document").ready(function() {
 
