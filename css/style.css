@@ -1,7 +1,5 @@
-/*FONT*/
-/*END FONT*/
-/*COLORS*/
-/*END COLORS*/
+/* Defining the fonts that will be used in the project. */
+/* Defining the colors that will be used in the project. */
 :root {
   font-family: "Poppins", sans-serif;
   color: #333333;
@@ -10,6 +8,10 @@
   scroll-behavior: smooth;
 }
 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -61,6 +63,7 @@ table {
   border-spacing: 0;
 }
 
+/* A CSS class that is used to style the icon. */
 .material-icons-round {
   font-family: "Material Icons Round";
   font-weight: normal;
@@ -1696,6 +1699,7 @@ body > main {
   }
 }
 
+/* A CSS rule that hides the scrollbar on Chrome and Safari. */
 ::-webkit-scrollbar {
   width: 0.5rem;
   background-color: transparent;

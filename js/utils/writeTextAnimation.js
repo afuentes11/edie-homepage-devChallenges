@@ -1,3 +1,8 @@
+/**
+ * It takes a selector and writes the text in it letter by letter with a delay of 25ms between each
+ * letter.
+ * @param selector - The selector of the element you want to animate.
+ */
 export function writeTextAnimation(selector){
 
     console.log('hola mundo')

@@ -1,32 +1,36 @@
+import { screen } from "./utils/screen.js";
+
 $("document").ready(function() {
 
-    var click_btn_return = false;
-    var top = false;
-    var countdownInterval;
-    var hidenBtnTimeout;
-    var previousPosition = $(window).scrollTop();
+    let click_btn_return = false;
+    let top = false;
+    let countdownInterval;
+    let hidenBtnTimeout;
+    let previousPosition = $(window).scrollTop();
 
     $(window).scroll(function() {
-        var header_outerHeight = $('.header').outerHeight(true); // reemplaza con el ID de tu elemento
-        var footer_outerHeight = $('.footer').outerHeight(true);
-        var alturaPantalla = $(document).height();
+        const header_outerHeight = $('.header').outerHeight(true); 
+        const footer_outerHeight = $('.footer').outerHeight(true);
+        const alturaPantalla = $(document).height();
 
-        var topScreen = $(window).scrollTop(); 
-        var bottomScreen = $(window).scrollTop() + $(window).height(); 
+        let topScreen = screen.topScreen(); 
+        let bottomScreen = screen.bottomScreenWithoutVisionLost(); 
 
-        var currentPosition = $(window).scrollTop(); 
+        let currentPosition = $(window).scrollTop(); 
         
+        /* Checking if the top of the screen is outside the header area or if the bottom of the screen
+        is outside the footer area. */
         if(topScreen < header_outerHeight || (alturaPantalla - footer_outerHeight) < bottomScreen){
             // evalua si la parte superior de la pantalla esta fuera de la zona del header, o si la zona inferior de la pantalla está fuera de la zona del footer
             if( $('.return-to-up').hasClass('slide-in-blurred-br') && (! hidden)){
                 hiden_btn_return();
             }
-
             hidden = true;
         }else{
             hidden = false;
         }
 
+      /* Checking if the user is scrolling up or down. */
         if (currentPosition < previousPosition) {
 
             if((! $('.return-to-up').hasClass('slide-out-blurred-br')) && ( ! click_btn_return) && (! top ) && (! hidden ) ){
@@ -39,6 +43,7 @@ $("document").ready(function() {
                 hiden_btn_return()
             }
         }
+
         previousPosition = currentPosition;
     });
 
@@ -49,6 +54,9 @@ $("document").ready(function() {
         }, 1000)
     })
 
+/**
+ * If the user clicks the button, then hide the button for 300ms, and then show it again.
+ */
     function hiden_btn_return() {
         click_btn_return = true
         $('.return-to-up').addClass('slide-out-blurred-br');
@@ -61,6 +69,10 @@ $("document").ready(function() {
         },300)
     }  
 
+    /**
+     * Every second, decrease the countdown variable by 1, and if it's less than or equal to 0, hide
+     * the button and stop the countdown.
+     */
     function startCountdown() {
         var countdown = 3; 
         clearInterval(countdownInterval); 
@@ -73,7 +85,4 @@ $("document").ready(function() {
         }, 1000); 
     }
 
-
-    
-    
 });
