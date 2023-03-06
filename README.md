@@ -42,12 +42,14 @@
    <img src="https://github.com/afuentes11/edie-homepage-devChallenges/blob/master/img/mobile%20gif.gif" alt="css3" width="25%" />
 </div>
 
-The project consists of the creation of a responsive checkout page for an online shop. [The original design](https://www.figma.com/file/4B0x88GhiZvgVlcQPSQ73D?chrome=DOCUMENTATION&embed_host=astra&kind=&node-id=0%3A1&viewer=1) was provided by Devchallenges in the challenge.
+The project consists of creating a responsive landing page for a fictitious software development company, EDIE. [The original design](https://www.figma.com/file/ahnGupP4JjTdVJDTRfMRF2?chrome=DOCUMENTATION&embed_host=astra&kind=&node-id=0%3A1&viewer=1) was provided by Devchallenges in the challenge.
 
-The page can be viewed at the following [link](https://afuentes11.github.io/checkout-page-devChallenge/). If you liked the project, give me a star ⭐.
+The page can be viewed at the following [link](https://afuentes11.github.io/edie-homepage-devChallenges/). If you liked the project, give me a star ⭐.
 
-The development of the website was a challenge, despite being a simple form, due to the multiple functionalities it required, such as the implementation of modals, form validation and allowing to be able to vary the quantity of each product.
-For the functionality I used JQUERY, in order to get to know the library and be able to extend my development stack.
+At the beginning of the project I set out to learn a new technology to better organize CSS code, and what better tool than SASS, a CSS code preprocessor that basically gives you superpowers, it allows you to use functions, conditionals, iterators to structure CSS code. Learning to use this technology is necessary to be able to develop better and better interfaces with cleaner and more readable code.
+
+On the other hand, I kept learning about JQUERY and in turn strengthening my programming logic.
+
 
 ### Built With
 
@@ -81,14 +83,22 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and [N
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/your-user-name/your-project-name
+$ git clone https://github.com/afuentes11/edie-homepage-devChallenges.git
 
 # Install dependencies
 $ npm install
 
-# Run the app
-$ npm start
+# to modify the styles in the SCSS code you need to activate SASS
+$ sass --watch scss:css
+
 ```
+
+ - install visual studio code extensions
+Priority: liveserver
+
+
+
+
 
 ## Acknowledgements
 
