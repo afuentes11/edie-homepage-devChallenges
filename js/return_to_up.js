@@ -1,5 +1,3 @@
-import { screen } from "./utils/Screen.js";
-
 $("document").ready(function() {
 
     let click_btn_return = false;
@@ -14,8 +12,8 @@ $("document").ready(function() {
         const footer_outerHeight = $('.footer').outerHeight(true);
         const alturaPantalla = $(document).height();
 
-        let topScreen = screen.topScreen(); 
-        let bottomScreen = screen.bottomScreenWithoutVisionLost(); 
+        let topScreen = $(window).scrollTop();
+        let bottomScreen = $(window).scrollTop() + $(window).height(); 
 
         let currentPosition = $(window).scrollTop(); 
         
